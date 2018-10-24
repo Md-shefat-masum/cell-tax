@@ -1,0 +1,387 @@
+/*
+*******************************************
+*******************************************
+
+Template Name: portfolio
+Template URL: http://
+Description:  Personal Portfolio Template.
+Author: Shefat production
+Author URL: https://mdsheft.com
+Version: 1.0
+
+* This file contains the styling for the actual theme, this
+is the file you need to edit to change the look of the
+theme.
+
+This files contents are outlined below >>>>
+
+*** SEARCH EACH SECTION AS IT COMMENTS, YOU WILL GET THE RIGHT SECTION.
+
+**************************************************
+**************************************************
+
+==== CSS INDEX ===================================
+
+01 - defaul css
+02 - Common heading part css
+03 - back to top button
+
+==================================================*/
+
+
+/*================================================
+    01 - defaul css
+==================================================*/
+
+* {
+    padding: 0;
+    outline: 0;
+    margin: 0;
+}
+
+body,
+p,
+a,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 20px;
+    display: block;
+    text-decoration: none;
+    margin-bottom: 0;
+}
+
+a {
+    text-decoration: none;
+    &:hover {
+        text-decoration: none;
+    }
+}
+
+body {
+    overflow-x: hidden;
+}
+
+h1 {
+    font-size: 60px;
+    line-height: 54px;
+    color: @white;
+}
+
+h2 {
+    font-size: 59px;
+    line-height: auto;
+}
+
+h3 {}
+
+h4 {}
+
+h5 {
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 30px;
+}
+
+h6 {}
+
+p {
+    font-size: 20px;
+    line-height: 24px;
+    font-weight: 400;
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*mixins and variables start*/
+
+@white: #ffffff;
+@black: #242424;
+@red: #ee1c25;
+.tr (@t) {
+    transition: all linear @t;
+    -moz-transition: all linear @t;
+    -ms-transition: all linear @t;
+    -o-transition: all linear @t;
+    -webkit-transition: all linear @t;
+}
+
+.os() {
+    font-family: 'Open Sans', sans-serif;
+}
+
+
+/*mixins and variables end*/
+
+#header {
+    background: @black;
+    padding: 20px 0px;
+    p {
+        color: @white;
+        font-size: 14px;
+        line-height: 20px;
+        display: inline;
+        margin-right: 15px;
+        i {
+            padding-right: 10px;
+        }
+    }
+    ul {
+        float: right;
+        margin-bottom: 0;
+        padding-bottom: 0;
+        overflow: hidden;
+        li {
+            float: left;
+            a {
+                display: inline-block;
+                color: @white;
+                margin-right: 30px;
+                position: relative;
+            }
+            position: relative;
+            &:nth-child(1) {
+                &:before {
+                    position: absolute;
+                    width: 10px;
+                    height: 15px;
+                    content: '|';
+                    color: @white;
+                    right: 5px;
+                    top: 0;
+                }
+            }
+        }
+    }
+}
+
+
+/*header part end*/
+
+
+/*nav part start*/
+
+.navbar-light .navbar-nav .nav-link {
+    padding: 35px 30px;
+    color: @black;
+}
+
+nav {
+    padding-top: 0;
+    ;
+    padding-bottom: 0;
+    position: relative;
+    &:before {
+        width: 100%;
+        height: 4px;
+        background: #c8c8c8;
+        content: '';
+        top: 0;
+        left: 0;
+        position: absolute;
+    }
+    &:after {
+        width: 100%;
+        height: 4px;
+        background: #c8c8c8;
+        content: '';
+        bottom: 0;
+        left: 0;
+        position: absolute;
+    }
+    .nav-item {
+        padding-top: 0;
+        padding-bottom: 0;
+        color: @black;
+        .nav-link {
+            color: @black;
+            .os();
+            text-transform: uppercase;
+            font-weight: 600;
+            position: relative;
+            padding: 35px 30px;
+            .tr(.3s);
+            &:before {
+                width: 100%;
+                height: 4px;
+                background: transparent;
+                content: '';
+                position: absolute;
+                top: -8px;
+                left: 0;
+                z-index: 9;
+                .tr(.3s);
+            }
+            &:after {
+                width: 100%;
+                height: 4px;
+                background: transparent;
+                content: '';
+                position: absolute;
+                bottom: -8px;
+                left: 0;
+                z-index: 9;
+                .tr(.3s);
+            }
+            &:hover,
+            &:focus {
+                color: @red;
+                &:after {
+                    background: @red;
+                }
+                &:before {
+                    background: @red;
+                }
+            }
+        }
+        form {
+            button {
+                background: transparent;
+                border: 0;
+                font-size: 16px;
+                line-height: 16px;
+                padding: 20px;
+                margin-top: 30%;
+                color: @black;
+                transform: translateY(-505);
+                background: #c8c8c8;
+                .tr(.3s);
+                cursor: pointer;
+                &:hover {
+                    background: @red;
+                    i {
+                        color: @white;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+/*nav part end*/
+
+
+/*banner part start*/
+
+#banner {
+    background: url(../images/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    padding-top: 400px;
+    .banner-body {
+        width: 100%;
+        overflow: hidden;
+        .banner-content {
+            margin-top: 0px;
+            width: 100%;
+            overflow: hidden;
+            background: #ee1c25b5;
+            padding: 30px 0px;
+            text-align: center;
+            h3 {
+                .os();
+                font-weight: 300;
+                font-size: 40px;
+                color: @white;
+                line-height: 50px;
+                span {
+                    font-weight: 600;
+                }
+            }
+            h1 {
+                font-size: 115px;
+                line-height: 115px;
+                font-weight: 800;
+                .os();
+                text-transform: uppercase;
+                text-align: center;
+                width: 100%;
+                padding-bottom: 20px;
+            }
+            p {
+                .os();
+                font-size: 14px;
+                font-weight: 300;
+                color: @white;
+                span {
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}
+
+
+/*banner part end*/
+
+
+/*customer part start*/
+
+#customer {
+    padding: 80px 0px;
+    h2 {
+        font-size: 43px;
+        line-height: 53px;
+        color: @black;
+        text-align: center;
+        text-transform: uppercase;
+        padding-bottom: 50px;
+    }
+    .cus-body {
+        .cus-img {
+            width: 80%;
+            img {
+                width: 100%;
+            }
+            position: relative;
+            &:before {
+                width: 50px;
+                height: 70px;
+                background: #ccd5de;
+                position: absolute;
+                right: -25px;
+                bottom: 0;
+                content: '"';
+                font-size: 108px;
+                line-height: 125px;
+                .os();
+                font-style: italic;
+                color: @white;
+            }
+        }
+        p {
+            color: #a6a6a6;
+            font-weight: 300;
+            font-style: italic;
+            .os();
+            font-size: 15px;
+            line-height: 16px;
+        }
+        a {
+            font-size: 16px;
+            font-weight: 400;
+            color:
+        }
+        h5 {}
+    }
+}
+
+
+/*customer part end*/
+
+
+/* 
+*
+* 
+*
+*
+* * */
